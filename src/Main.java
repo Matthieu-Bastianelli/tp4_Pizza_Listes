@@ -13,10 +13,10 @@ public class Main {
 				"===============================================================================================================\nTEST Pizza! \r\n");
 		
 		//Création de pizzas:
-		Pizza pizzaMAR = new Pizza("MAR","Margarita",8);
-		Pizza pizza4FR = new Pizza("4FR","4 Fromage",10);
-		Pizza pizzaCAL = new Pizza("CAL","Calzone",9);
-		Pizza pizzaJOF = new Pizza("JOF","Jambon Oeuf Fromage",7);
+		Pizza pizzaMAR = new Pizza("MAR","Margarita",8, EnumCategoriesPizza.AUTRE);
+		Pizza pizza4FR = new Pizza("4FR","4 Fromage",10,EnumCategoriesPizza.FROMAGE);
+		Pizza pizzaCAL = new Pizza("CAL","Calzone",9,EnumCategoriesPizza.AUTRE);
+		Pizza pizzaJOF = new Pizza("JOF","Jambon Oeuf Fromage",7,EnumCategoriesPizza.VIANDE);
 		
 		//Affichage test :
 		System.out.println("Pizza 1 :\n"+pizzaMAR.toString());
@@ -42,7 +42,7 @@ public class Main {
 		
 		System.out.println(ensemblePizza.toString());
 		
-		ensemblePizza.updatePizza("MAR", new Pizza("MAR","Marinière",11));
+		ensemblePizza.updatePizza("MAR", new Pizza("MAR","Marinière",11,EnumCategoriesPizza.POISSON));
 
 		System.out.println(ensemblePizza.toString());
 		

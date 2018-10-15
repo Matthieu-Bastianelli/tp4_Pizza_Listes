@@ -28,10 +28,10 @@ public class PizzaMemDAO implements IPizzaDao{
 	public PizzaMemDAO() {
 		super();
 		this.listeDePizza = new ArrayList<Pizza>();
-		this.listeDePizza.add(new Pizza("MAR","Margarita",8));
-		this.listeDePizza.add(new Pizza("4FR","4 Fromage",10));
-		this.listeDePizza.add(new Pizza("CAL","Calzone",9));
-		this.listeDePizza.add(new Pizza("JOF","Jambon Oeuf Fromage",7));
+		this.listeDePizza.add(new Pizza("MAR","Margarita",8, EnumCategoriesPizza.AUTRE));
+		this.listeDePizza.add(new Pizza("4FR","4 Fromage",10,EnumCategoriesPizza.FROMAGE));
+		this.listeDePizza.add(new Pizza("CAL","Calzone",9,EnumCategoriesPizza.AUTRE));
+		this.listeDePizza.add(new Pizza("JOF","Jambon Oeuf Fromage",7,EnumCategoriesPizza.VIANDE));
 		
 	}
 	

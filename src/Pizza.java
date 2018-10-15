@@ -9,6 +9,7 @@ public class Pizza implements Comparable<Pizza>{
 	private String code = null;
 	private String nom = null;
 	private float prix = Float.MIN_VALUE;
+	private EnumCategoriesPizza categorie; //Ajout de la catégorie liée à l'Enum créé.
 	//--------------------------------------------------------------------------------------
 	/**
 	 * Création de constructeurs :
@@ -16,11 +17,12 @@ public class Pizza implements Comparable<Pizza>{
 	 * @param nom
 	 * @param prix
 	 */
-	public Pizza(String code, String nom, float prix) {
+	public Pizza(String code, String nom, float prix, EnumCategoriesPizza categorie) {
 		super();
 		this.code = code;
 		this.nom = nom;
 		this.prix = prix;
+		this.categorie =categorie;
 	}
 	
 
@@ -36,7 +38,7 @@ public class Pizza implements Comparable<Pizza>{
 	 */
 	@Override
 	public String toString() {
-		return "Pizza [code=" + code + ", nom=" + nom + ", prix=" + prix + "\u20ac ]\n";
+		return "Pizza [code=" + code + ", nom=" + nom + ", prix=" + prix + "\u20ac, catégorie="+ categorie +" ]\n";
 	}
 	
 	/**
